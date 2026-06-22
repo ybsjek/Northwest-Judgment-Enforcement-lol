@@ -5,316 +5,334 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Northwest Judgment Enforcement | We Help You Collect Your Court Judgments</title>
     <style>
-        :root {
-            --primary: #0f1e36;
-            --secondary: #8a7355;
-            --text-dark: #2d3748;
-            --text-light: #f7fafc;
-            --bg-light: #f8f9fa;
-            --roundness: 12px;
+        :root{
+            --primary:#0f1e36;
+            --secondary:#8a7355;
+            --text-dark:#2d3748;
+            --text-light:#f7fafc;
+            --bg-light:#f8f9fa;
+            --roundness:12px;
+        }
+        html{scroll-behavior:smooth;}
+        *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        body{color:var(--text-dark);line-height:1.6;background:#fff;}
+
+        header{
+            background:var(--primary);
+            padding:15px 10px;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.15);
         }
 
-        html {
-            scroll-behavior: smooth;
+        .nav-container{
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:20px;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .logo-container{
+            display:flex;
+            align-items:center;
+            text-decoration:none;
+            gap:12px;
+            min-width:0;
         }
 
-        body {
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #ffffff;
+        .logo-img{
+            height:52px;
+            width:auto;
+            max-width:120px;
+            object-fit:contain;
+            display:block;
+            flex-shrink:0;
         }
 
-        header {
-            background: var(--primary);
-            padding: 15px 10px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        .logo-text{
+            color:var(--text-light);
+            font-size:1.25rem;
+            font-weight:700;
+            letter-spacing:0.3px;
+            line-height:1.1;
+            white-space:nowrap;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+        .logo-text span{color:var(--secondary);}
+
+        nav{display:flex;align-items:center;}
+        nav a{
+            color:var(--text-light);
+            text-decoration:none;
+            margin-left:25px;
+            font-size:0.95rem;
+            transition:color 0.25s;
+        }
+        nav a:hover{color:var(--secondary);}
+
+        .hero{
+            background:linear-gradient(rgba(15,30,54,0.95),rgba(15,30,54,0.85)),url('https://unsplash.com') no-repeat center center/cover;
+            padding:220px 20px 140px 20px;
+            color:var(--text-light);
+            text-align:center;
+        }
+        .hero h1{font-size:2.8rem;margin-bottom:20px;font-weight:600;}
+        .hero p{font-size:1.15rem;max-width:700px;margin:0 auto 35px;color:#cbd5e0;}
+        .btn{
+            background:var(--secondary);
+            color:var(--text-light);
+            padding:14px 35px;
+            text-decoration:none;
+            border-radius:var(--roundness);
+            font-weight:700;
+            display:inline-block;
+            transition:background 0.25s,transform 0.15s;
+        }
+        .btn:hover{background:#735f43;transform:translateY(-1px);}
+
+        section{
+            padding:90px 20px;
+            max-width:1200px;
+            margin:0 auto;
+            clear:both;
+            scroll-margin-top:110px;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 12px;
-            min-width: 0;
+        .section-title{
+            text-align:center;
+            margin-bottom:40px;
+            position:relative;
+            padding-bottom:15px;
+            font-size:2rem;
+            color:var(--primary);
+        }
+        .section-title::after{
+            content:'';
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            width:50px;
+            height:3px;
+            background:var(--secondary);
+            border-radius:2px;
         }
 
-        .logo-img {
-            height: 52px;
-            width: auto;
-            max-width: 120px;
-            object-fit: contain;
-            display: block;
-            flex-shrink: 0;
+        .services-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:24px;
+            margin-top:20px;
         }
 
-        .logo-text {
-            color: var(--text-light);
-            font-size: 1.25rem;
-            font-weight: bold;
-            letter-spacing: 0.3px;
-            line-height: 1.1;
-            white-space: nowrap;
+        .service-card{
+            background:var(--bg-light);
+            padding:28px;
+            border-radius:var(--roundness);
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-left:5px solid var(--secondary);
         }
 
-        .logo-text span {
-            color: var(--secondary);
+        .service-card h3{
+            margin-bottom:12px;
+            color:var(--primary);
+            font-size:1.15rem;
         }
 
-        nav {
-            display: flex;
-            align-items: center;
+        .service-card p{
+            color:var(--text-dark);
+            line-height:1.45;
         }
 
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+        .photo-section{padding-top:20px;}
+
+        .photo-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:15px;
         }
 
-        nav a:hover {
-            color: var(--secondary);
+        .photo-card{
+            background:#fff;
+            border-radius:var(--roundness);
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.06);
         }
 
-        .hero {
-            background: linear-gradient(rgba(15, 30, 54, 0.95), rgba(15, 30, 54, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
-            padding: 220px 20px 140px 20px;
-            color: var(--text-light);
-            text-align: center;
+        .photo-card img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            display:block;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 600;
+        .photo-caption{
+            padding:12px 14px;
+            background:var(--bg-light);
+            color:var(--text-dark);
+            font-weight:600;
+            text-align:center;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 35px auto;
-            color: #cbd5e0;
+        .articles-section{
+            background:var(--bg-light);
+            border-top:1px solid #e5e7eb;
+            border-bottom:1px solid #e5e7eb;
         }
 
-        .btn {
-            background: var(--secondary);
-            color: var(--text-light);
-            padding: 14px 35px;
-            text-decoration: none;
-            border-radius: var(--roundness);
-            font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
-            display: inline-block;
+        .articles-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:24px;
+            margin-top:22px;
         }
 
-        .btn:hover {
-            background: #735f43;
-            transform: translateY(-1px);
+        .article-card{
+            background:#fff;
+            border-radius:var(--roundness);
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            overflow:hidden;
+            border-top:4px solid var(--primary);
+            display:flex;
+            flex-direction:column;
         }
 
-        section {
-            padding: 90px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            clear: both;
-            scroll-margin-top: 110px;
+        .article-card img{
+            width:100%;
+            height:190px;
+            object-fit:cover;
+            display:block;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 15px;
-            font-size: 2rem;
-            color: var(--primary);
+        .article-content{
+            padding:22px;
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+            flex:1;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: var(--secondary);
-            border-radius: 2px;
+        .article-tag{
+            display:inline-block;
+            color:var(--secondary);
+            font-weight:700;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            letter-spacing:0.05em;
         }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 20px;
+        .article-content h3{
+            color:var(--primary);
+            font-size:1.2rem;
+            line-height:1.35;
         }
 
-        .about-card {
-            background: var(--bg-light);
-            padding: 35px;
-            border-left: 5px solid var(--secondary);
-            border-radius: var(--roundness);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        .article-content p{
+            color:var(--text-dark);
         }
 
-        .about-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
+        .article-link{
+            margin-top:auto;
+            display:inline-block;
+            color:var(--primary);
+            font-weight:700;
+            text-decoration:none;
         }
 
-        .photo-section {
-            padding-top: 20px;
+        .article-link:hover{
+            color:var(--secondary);
+            text-decoration:underline;
         }
 
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 15px;
+        .tools-container{
+            background:#fff;
+            padding:40px 0;
+            overflow:hidden;
         }
 
-        .photo-card {
-            background: #ffffff;
-            border-radius: var(--roundness);
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        .tools-list{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            list-style:none;
+            margin-top:20px;
+            width:100%;
         }
 
-        .photo-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
+        .tools-item{
+            background:var(--bg-light);
+            padding:22px;
+            border-radius:var(--roundness);
+            border-top:4px solid var(--primary);
+            font-weight:700;
+            color:var(--primary);
+            text-align:center;
+            box-shadow:0 6px 15px rgba(0,0,0,0.04);
+            min-height:95px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
 
-        .photo-caption {
-            padding: 15px 18px;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            font-weight: 600;
-            text-align: center;
+        .tools-item:hover{transform:translateY(-3px);transition:transform 0.18s;}
+
+        footer{
+            background:var(--primary);
+            color:#a0aec0;
+            padding:50px 20px;
+            text-align:center;
+            font-size:0.95rem;
+            border-top:3px solid var(--secondary);
+            line-height:1.8;
+            width:100%;
+            clear:both;
         }
 
-        .tools-container {
-            background: #ffffff;
-            padding: 40px 0;
-            width: 100%;
-            display: block;
-            height: auto;
-            overflow: hidden;
+        footer a{
+            color:#cbd5e0;
+            text-decoration:none;
         }
 
-        .tools-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            list-style: none;
-            margin-top: 20px;
-            width: 100%;
+        footer a:hover{
+            color:var(--secondary);
         }
 
-        .tools-item {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: var(--roundness);
-            border-top: 4px solid var(--primary);
-            font-weight: 600;
-            color: var(--primary);
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.04);
-            transition: transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 95px;
-        }
-
-        .tools-item:hover {
-            transform: translateY(-3px);
-        }
-
-        footer {
-            background: var(--primary);
-            color: #a0aec0;
-            padding: 50px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 3px solid var(--secondary);
-            line-height: 1.8;
-            width: 100%;
-            clear: both;
-        }
-
-        footer p {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        footer a {
-            color: #cbd5e0;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--secondary);
-        }
-
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-direction: column;
-                text-align: center;
+        @media(max-width:992px){
+            .nav-container{
+                flex-direction:column;
+                text-align:center;
             }
-
-            .logo-container {
-                margin-bottom: 15px;
-                justify-content: center;
+            .logo-container{
+                justify-content:center;
             }
-
-            .logo-img {
-                height: 44px;
-                max-width: 105px;
+            .logo-img{
+                height:44px;
+                max-width:105px;
             }
-
-            .logo-text {
-                font-size: 1.1rem;
-                white-space: normal;
-                text-align: center;
+            .logo-text{
+                font-size:1.1rem;
+                white-space:normal;
+                text-align:center;
             }
-
-            nav {
-                flex-direction: column;
+            nav{
+                flex-direction:column;
             }
-
-            nav a {
-                margin: 8px 0;
+            nav a{
+                margin:8px 0;
             }
-
-            .hero {
-                padding-top: 300px;
+            .hero{
+                padding-top:300px;
             }
-
-            .photo-card img {
-                height: 250px;
+            .photo-card img{
+                height:250px;
+            }
+            .article-card img{
+                height:180px;
             }
         }
     </style>
@@ -323,62 +341,110 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo-container">
-                <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <a href="index.html" class="logo-container" aria-label="Northwest Judgment Enforcement home">
+                <img src="logo.png" alt="Northwest Judgment Enforcement logo" class="logo-img" onerror="this.style.display='none'">
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="#about">What We Do</a>
                 <a href="#tools">How We Collect</a>
+                <a href="judgment-creditor-education.html">Judgment Creditor Education</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
-    <div class="hero" id="top">
+    <div class="hero" id="top" role="region" aria-label="Introduction">
         <h1>Won Your Court Case But Haven't Been Paid?</h1>
-        <p>Winning in court is hard enough. Finding the money can be even harder. We help regular people and businesses track down hidden assets and finally get the money they are owed.</p>
+        <p>Winning in court is hard enough. Finding the money can be even harder. We help people and businesses find assets and enforce court judgments so you get paid.</p>
         <a href="contact.html" class="btn">Get Help Collecting Your Money</a>
     </div>
 
-    <section id="about">
-        <h2 class="section-title">What We Do</h2>
-        <div class="about-grid">
-            <div class="about-card">
-                <h3>Judgment Collection Assistance</h3>
-                <p>If you won a court case and the other party refuses to pay, we take over the stressful part. We handle the paperwork, track the deadlines, and keep the pressure on the debtor until the account is settled.</p>
+    <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="section-title">What We Do</h2>
+
+        <div class="services-grid">
+            <div class="service-card" role="article" aria-labelledby="s1">
+                <h3 id="s1">We handle all the paperwork</h3>
+                <p>We prepare and file the necessary documents, manage deadlines, and ensure every procedural step is handled correctly so your judgment remains enforceable.</p>
             </div>
-            <div class="about-card">
-                <h3>Asset Hunting & Background Checks</h3>
-                <p>People who owe money love to hide it. Our team specializes in digging deep to find hidden bank accounts, active employment records, secret business links, and property holdings that can be used to pay off your judgment.</p>
+
+            <div class="service-card" role="article" aria-labelledby="s2">
+                <h3 id="s2">We work directly with the courts</h3>
+                <p>We coordinate with court clerks and judicial staff, follow court procedures, and pursue enforcement actions on your behalf so you don’t have to navigate the system alone.</p>
+            </div>
+
+            <div class="service-card" role="article" aria-labelledby="s3">
+                <h3 id="s3">We find and secure assets</h3>
+                <p>We locate assets the judgment debtor holds — including real estate, vehicles, intellectual property, business assets, and personal property — and identify options to seize or lien those assets to satisfy your judgment.</p>
             </div>
         </div>
     </section>
 
-    <section class="photo-section" id="photos">
-        <h2 class="section-title">Focused on Results</h2>
+    <section class="photo-section" id="photos" aria-labelledby="photos-heading">
+        <h2 id="photos-heading" class="section-title">Focused on Results</h2>
         <div class="photo-grid">
             <div class="photo-card">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8c0f9a4b48bb89319929e1bdf543f8a01e73a241.jpg" alt="Legal documents and gavel">
-                <div class="photo-caption">Legal paperwork and court enforcement</div>
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8c0f9a4b48bb89319929e1bdf543f8a01e73a241.jpg" alt="Gavel and legal documents on a desk">
+                <div class="photo-caption">Legal paperwork and enforcement</div>
             </div>
             <div class="photo-card">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fc2561d595e31df5414e609a4dc1613f2b3355b8.jpg" alt="Business consultation handshake">
-                <div class="photo-caption">Professional client consultation</div>
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fc2561d595e31df5414e609a4dc1613f2b3355b8.jpg" alt="Business professionals shaking hands">
+                <div class="photo-caption">Client consultations and strategy</div>
             </div>
             <div class="photo-card">
-                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7b908a534ad45e5b468fcbd2581bc4aa66efcc78.jpg" alt="Signed legal document with gavel">
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7b908a534ad45e5b468fcbd2581bc4aa66efcc78.jpg" alt="Signed legal document with a gavel">
                 <div class="photo-caption">Moving the case forward</div>
             </div>
         </div>
     </section>
 
-    <section id="tools" class="tools-container">
-        <h2 class="section-title">How We Collect</h2>
-        <p style="text-align: center; max-width: 700px; margin: -20px auto 30px auto; color: var(--text-dark);">
+    <section id="articles" class="articles-section" aria-labelledby="articles-heading">
+        <h2 id="articles-heading" class="section-title">Articles</h2>
+        <p style="text-align:center;max-width:750px;margin:-20px auto 30px auto;color:var(--text-dark);">
+            Read short educational posts about judgment collection, asset discovery, and enforcement tools. This section is where your blog articles will live.
+        </p>
+
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/908cb64b338e7b1c0237646b5a40f68e560ffcaf.jpg" alt="Legal documents and gavel">
+                <div class="article-content">
+                    <span class="article-tag">Process</span>
+                    <h3>What Happens After You Win a Judgment?</h3>
+                    <p>Explain the first steps a judgment creditor should take after the court rules in their favor.</p>
+                    <a href="#" class="article-link">Read article</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fc2561d595e31df5414e609a4dc1613f2b3355b8.jpg" alt="Professional consultation">
+                <div class="article-content">
+                    <span class="article-tag">Assets</span>
+                    <h3>How Asset Discovery Can Help Collect a Judgment</h3>
+                    <p>Walk visitors through how assets, income, and property may be uncovered during collection.</p>
+                    <a href="#" class="article-link">Read article</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7b908a534ad45e5b468fcbd2581bc4aa66efcc78.jpg" alt="Signed legal document">
+                <div class="article-content">
+                    <span class="article-tag">Tools</span>
+                    <h3>Common Judgment Collection Tools Explained</h3>
+                    <p>Describe garnishment, liens, sheriff sales, debtor examinations, and other enforcement options.</p>
+                    <a href="#" class="article-link">Read article</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="tools" class="tools-container" aria-labelledby="tools-heading">
+        <h2 id="tools-heading" class="section-title">How We Collect</h2>
+        <p style="text-align:center;max-width:700px;margin:-20px auto 30px auto;color:var(--text-dark);">
             We use every legal tool available to tap into the debtor's income and property so your court order doesn't just sit on a shelf.
         </p>
-        <ul class="tools-list">
+
+        <ul class="tools-list" aria-label="Collection methods">
             <li class="tools-item">Wage Garnishment</li>
             <li class="tools-item">Bank Account Garnishment</li>
             <li class="tools-item">Property Liens</li>
@@ -389,7 +455,7 @@
         </ul>
     </section>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved. <a href="contact.html">Contact</a></p>
     </footer>
 
