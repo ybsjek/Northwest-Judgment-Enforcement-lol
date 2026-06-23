@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Wage Garnishment? | Northwest Judgment Enforcement</title>
+    <style>
+        :root{
+            --primary:#0f1e36;
+            --secondary:#8a7355;
+            --text-dark:#2d3748;
+            --text-light:#f7fafc;
+            --bg-light:#f8f9fa;
+            --roundness:12px;
+        }
+        html{scroll-behavior:smooth;}
+        *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        body{color:var(--text-dark);line-height:1.7;background:#fff;}
+        header{
+            background:var(--primary);
+            padding:15px 10px;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.15);
+        }
+        .nav-container{
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:20px;
+        }
+        .logo-container{
+            display:flex;
+            align-items:center;
+            text-decoration:none;
+            gap:12px;
+            min-width:0;
+        }
+        .logo-img{
+            height:52px;
+            width:auto;
+            max-width:120px;
+            object-fit:contain;
+            display:block;
+            flex-shrink:0;
+        }
+        .logo-text{
+            color:var(--text-light);
+            font-size:1.25rem;
+            font-weight:700;
+            letter-spacing:0.3px;
+            line-height:1.1;
+            white-space:nowrap;
+        }
+        .logo-text span{color:var(--secondary);}
+        nav{display:flex;align-items:center;}
+        nav a{
+            color:var(--text-light);
+            text-decoration:none;
+            margin-left:25px;
+            font-size:0.95rem;
+            transition:color 0.25s;
+        }
+        nav a:hover{color:var(--secondary);}
+        .hero{
+            background:linear-gradient(rgba(15,30,54,0.95),rgba(15,30,54,0.85)),url('https://unsplash.com') no-repeat center center/cover;
+            padding:220px 20px 130px;
+            color:var(--text-light);
+            text-align:center;
+        }
+        .hero h1{font-size:2.6rem;margin-bottom:18px;font-weight:600;}
+        .hero p{font-size:1.12rem;max-width:900px;margin:0 auto 30px;color:#cbd5e0;}
+        .btn{
+            background:var(--secondary);
+            color:var(--text-light);
+            padding:14px 34px;
+            text-decoration:none;
+            border-radius:var(--roundness);
+            font-weight:700;
+            display:inline-block;
+            transition:background 0.25s,transform 0.15s;
+        }
+        .btn:hover{background:#735f43;transform:translateY(-1px);}
+        main{
+            max-width:1000px;
+            margin:0 auto;
+            padding:80px 20px 90px;
+        }
+        .article h2{
+            font-size:1.9rem;
+            color:var(--primary);
+            margin-bottom:18px;
+            position:relative;
+            padding-bottom:12px;
+        }
+        .article h2::after{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:60px;
+            height:3px;
+            background:var(--secondary);
+            border-radius:2px;
+        }
+        .article h3{
+            font-size:1.25rem;
+            color:var(--primary);
+            margin:28px 0 12px;
+        }
+        .article p{margin-bottom:14px;}
+        .lead-box,
+        .info-box,
+        .closing-box{
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
+            border-radius:var(--roundness);
+            padding:24px 26px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            margin:18px 0 26px;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:18px;
+            margin:18px 0 28px;
+        }
+        .card{
+            background:#fff;
+            border-radius:var(--roundness);
+            padding:20px 22px;
+            border-top:4px solid var(--primary);
+            box-shadow:0 8px 20px rgba(0,0,0,0.04);
+        }
+        .card h4{
+            color:var(--primary);
+            margin-bottom:10px;
+            font-size:1.05rem;
+        }
+        .card p{margin-bottom:0;}
+        .list{
+            margin:12px 0 0 20px;
+        }
+        .list li{margin-bottom:10px;}
+        footer{
+            background:var(--primary);
+            color:#a0aec0;
+            padding:50px 20px;
+            text-align:center;
+            font-size:0.95rem;
+            border-top:3px solid var(--secondary);
+            line-height:1.8;
+            width:100%;
+            clear:both;
+        }
+        footer a{color:#cbd5e0;text-decoration:none;}
+        footer a:hover{color:var(--secondary);}
+        @media(max-width:992px){
+            .nav-container{flex-direction:column;text-align:center;}
+            .logo-container{justify-content:center;}
+            .logo-img{height:44px;max-width:105px;}
+            .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
+            nav{flex-direction:column;}
+            nav a{margin:8px 0;}
+            .hero{padding-top:300px;}
+            .hero h1{font-size:2.1rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo-container" aria-label="Northwest Judgment Enforcement home">
+            <img src="logo.png" alt="Northwest Judgment Enforcement logo" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html#about">What We Do</a>
+            <a href="index.html#tools">How We Collect</a>
+            <a href="judgment-creditor-education.html">Judgment Creditor Education</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>What is Wage Garnishment?</h1>
+        <p>
+            Wage garnishment is one of the most direct tools a judgment creditor can use to collect on a debt.
+            It allows a court-ordered portion of a debtor’s paycheck to be withheld and applied toward the judgment.
+        </p>
+        <a href="contact.html" class="btn">Discuss Wage Garnishment</a>
+    </section>
+
+    <article class="article">
+        <div class="lead-box">
+            <p>
+                Wage garnishment is a legal process that allows a creditor to collect money directly from a debtor’s wages after a judgment has been entered.
+            </p>
+            <p>
+                Instead of waiting for the debtor to pay voluntarily, the creditor can use the court’s authority to reach a portion of the debtor’s disposable earnings.
+            </p>
+        </div>
+
+        <h2>How It Works</h2>
+        <p>
+            Once the judgment creditor takes the proper legal steps, the court can issue a garnishment order to the debtor’s employer.
+            The employer then withholds the required amount from the debtor’s paycheck and sends it toward the judgment.
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <h4>Step 1: Get the writ</h4>
+                <p>The creditor requests the court to issue the garnishment paperwork needed to begin the process.</p>
+            </div>
+            <div class="card">
+                <h4>Step 2: Serve the employer</h4>
+                <p>The employer receives the order and becomes responsible for withholding wages as required by law.</p>
+            </div>
+            <div class="card">
+                <h4>Step 3: Apply payments</h4>
+                <p>The withheld money is forwarded to the creditor or the court and credited against the judgment balance.</p>
+            </div>
+        </div>
+
+        <h2>Why It Matters</h2>
+        <div class="info-box">
+            <p>
+                Wage garnishment can create steady payments over time and may be especially useful when a debtor has regular employment but is not paying voluntarily.
+            </p>
+            <p>
+                It also puts pressure on the debtor to resolve the debt because the process continues until the judgment is paid, the garnishment ends, or another legal outcome changes the case.
+            </p>
+        </div>
+
+        <h2>What Can Be Garnished</h2>
+        <p>
+            Garnishment law varies by state, but the basic idea is the same: a portion of disposable earnings may be taken to satisfy the judgment.
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <h4>Regular wages</h4>
+                <p>A portion of the debtor’s paycheck may be withheld from each pay period.</p>
+            </div>
+            <div class="card">
+                <h4>Disposable income</h4>
+                <p>Only income left after required deductions is typically considered.</p>
+            </div>
+            <div class="card">
+                <h4>Ongoing payments</h4>
+                <p>The garnishment can continue until the debt is satisfied or the court stops it.</p>
+            </div>
+        </div>
+
+        <h2>Important Limits</h2>
+        <ul class="list">
+            <li>Exemption laws protect certain minimum amounts so the debtor is not left without basic income.</li>
+            <li>Some kinds of income may be exempt or treated differently under state or federal law.</li>
+            <li>Employers must follow the court order carefully, but the exact procedure depends on the jurisdiction.</li>
+        </ul>
+
+        <div class="closing-box">
+            <p>
+                Wage garnishment is a powerful collection tool because it turns a court judgment into a recurring payment stream.
+                When used correctly, it helps judgment creditors recover money in a structured and enforceable way.
+            </p>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
+</footer>
+
+</body>
+</html>
