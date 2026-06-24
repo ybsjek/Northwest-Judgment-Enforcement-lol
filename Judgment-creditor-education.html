@@ -53,8 +53,10 @@
         .article-panel p{margin-bottom:14px;color:var(--text-dark);}
         footer{background:var(--primary);color:#a0aec0;padding:50px 20px;text-align:center;font-size:0.95rem;border-top:3px solid var(--secondary);line-height:1.8;width:100%;clear:both;}
         .footer-verse{color:#e2e8f0;font-style:italic;margin-bottom:14px;font-size:1rem;}
-        .footer-phone{color:#e2e8f0;text-decoration:none;transition:color 0.25s ease, text-decoration 0.25s ease;}
-        .footer-phone:hover{color:var(--secondary);text-decoration:underline;}
+        .footer-contact-line{margin:8px 0 10px 0;color:#e2e8f0;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;}
+        .footer-contact-line a{color:#e2e8f0;text-decoration:none;transition:color 0.25s ease, text-decoration 0.25s ease;}
+        .footer-contact-line a:hover{color:var(--secondary);text-decoration:underline;}
+        .footer-divider{color:#a0aec0;}
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -95,7 +97,7 @@
     <div class="articles-grid">
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a1')">
-                <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=1200&q=80" alt="Person standing in a courtroom">
+                <img src="https://images.unsplash.com/photo-1557409518-691fb7e4c9b1?auto=format&fit=crop&w=1200&q=80" alt="Inside of a courthouse">
                 <div class="article-content">
                     <h3>What Is a Debtor’s Examination?</h3>
                 </div>
@@ -108,20 +110,20 @@
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a2')">
-                <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=1200&q=80" alt="Male sheriff in uniform">
+                <img src="https://images.unsplash.com/photo-1560439514-4e964a1ad1f5?auto=format&fit=crop&w=1200&q=80" alt="Courthouse exterior">
                 <div class="article-content">
-                    <h3>What Is a Writ of Execution?</h3>
+                    <h3>Turnover Orders</h3>
                 </div>
             </div>
             <div id="a2" class="article-panel">
                 <h4>Overview</h4>
-                <p>A writ of execution is a court order that allows the enforcement of a judgment by directing a levying officer or sheriff to seize property that can be used to satisfy the debt.</p>
+                <p>A turnover order is a court order requiring a judgment debtor to surrender property or interests that can be used to satisfy a judgment.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a3')">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Sample pay stub">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80" alt="Paycheck">
                 <div class="article-content">
                     <h3>What Is Wage Garnishment?</h3>
                 </div>
@@ -147,20 +149,20 @@
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a5')">
-                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Courthouse exterior for intellectual property turnover order article">
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80" alt="Moving company truck">
                 <div class="article-content">
-                    <h3>Turnover Orders of Intellectual Property</h3>
+                    <h3>What Is a Writ of Execution?</h3>
                 </div>
             </div>
             <div id="a5" class="article-panel">
                 <h4>Overview</h4>
-                <p>A turnover order is a court order requiring a judgment debtor to surrender property or interests that can be used to satisfy a judgment.</p>
+                <p>A writ of execution is a court order that allows the enforcement of a judgment by directing a levying officer or sheriff to seize property that can be used to satisfy the debt.</p>
             </div>
         </div>
 
         <div class="article-wrap">
             <div class="article-card" onclick="toggleArticle('a6')">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Two standing people exchanging documents">
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Two standing people exchanging documents">
                 <div class="article-content">
                     <h3>Subpoenas</h3>
                 </div>
