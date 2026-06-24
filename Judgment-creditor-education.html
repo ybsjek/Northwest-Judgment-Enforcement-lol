@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn the different ways to collect on a judgment, including debtor's examinations, property liens, wage garnishment, turnover orders, bank levies, writ of execution, and subpoenas.">
-    <title>Articles | Judgment Collection Methods</title>
-
+    <meta name="description" content="Education on judgment enforcement, small claims, and ways to collect on a judgment in Washington, Idaho, and Oregon.">
+    <title>Education | Northwest Judgment Enforcement</title>
     <style>
         :root{
             --primary:#0f1e36;
@@ -17,13 +15,13 @@
             --bg-alt:#eef2f7;
             --roundness:14px;
         }
-        *{box-sizing:border-box;margin:0;padding:0;}
         html{scroll-behavior:smooth;}
+        *{box-sizing:border-box;margin:0;padding:0;}
         body{
-            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
             color:var(--text-dark);
             line-height:1.6;
             background:#fff;
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
         }
         header{
             background:var(--primary);
@@ -83,20 +81,20 @@
         nav.top-nav a:hover{color:var(--secondary);}
         .hero{
             background:
-                linear-gradient(rgba(15,30,54,0.90),rgba(15,30,54,0.78)),
-                url('https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+                linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
+                url('https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             padding:220px 20px 120px;
             color:var(--text-light);
             text-align:center;
         }
         .hero h1{
-            font-size:2.9rem;
+            font-size:2.8rem;
             margin-bottom:18px;
             font-family:'Georgia', serif;
         }
         .hero p{
             font-size:1.12rem;
-            max-width:850px;
+            max-width:820px;
             margin:0 auto 34px;
             color:#cbd5e0;
         }
@@ -139,44 +137,166 @@
             background:var(--secondary);
             border-radius:2px;
         }
-        .intro-box{
-            max-width:950px;
-            margin:0 auto 30px auto;
+        .card{
             background:#fff;
-            border-top:4px solid var(--secondary);
             border-radius:18px;
             box-shadow:0 8px 24px rgba(0,0,0,0.05);
             padding:28px;
+            border-top:4px solid var(--secondary);
         }
-        .intro-box p{
-            font-size:1.05rem;
-            line-height:1.75;
+        .card p,.card li{
+            font-size:1.02rem;
             color:var(--text-dark);
-            margin-bottom:12px;
+            line-height:1.75;
         }
+        .grid-2{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:24px;
+        }
+        .grid-3{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:22px;
+        }
+        .mini-card{
+            background:#fff;
+            border-radius:16px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-left:5px solid var(--secondary);
+            padding:24px;
+        }
+        .mini-card h3{
+            margin-bottom:10px;
+            color:var(--primary);
+            font-family:'Georgia', serif;
+            font-size:1.12rem;
+        }
+        .mini-card p{line-height:1.7;}
+        .step-list{
+            display:grid;
+            gap:16px;
+        }
+        .step{
+            display:flex;
+            gap:16px;
+            align-items:flex-start;
+            background:#fff;
+            border-radius:16px;
+            padding:20px 22px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-top:4px solid var(--secondary);
+        }
+        .step-num{
+            width:42px;
+            height:42px;
+            border-radius:50%;
+            background:var(--primary);
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:700;
+            flex-shrink:0;
+        }
+        .step h3{
+            color:var(--primary);
+            margin-bottom:8px;
+            font-size:1.1rem;
+            font-family:'Georgia', serif;
+        }
+        .accordion-list{
+            display:grid;
+            gap:16px;
+            max-width:950px;
+            margin:0 auto;
+        }
+        .accordion-item{
+            border-radius:18px;
+            overflow:hidden;
+            border:1px solid rgba(15,30,54,0.08);
+            background:#fff;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+        }
+        .accordion-btn{
+            width:100%;
+            padding:20px 22px;
+            border:0;
+            background:linear-gradient(90deg,#0f1e36,#1b3359);
+            color:var(--text-light);
+            font-size:1.08rem;
+            font-weight:700;
+            cursor:pointer;
+            text-align:left;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .accordion-btn span{font-size:1.2rem;color:var(--secondary);}
+        .accordion-panel{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.3s ease;
+            background:#fff;
+        }
+        .accordion-panel.open{max-height:420px;}
+        .accordion-panel p{
+            padding:18px 22px 12px;
+            font-size:1.02rem;
+            color:var(--text-dark);
+            line-height:1.75;
+        }
+        .resource-link-list{
+            padding:0 22px 22px;
+            display:grid;
+            gap:10px;
+        }
+        .resource-link-list a{
+            color:var(--primary);
+            text-decoration:none;
+            font-weight:700;
+        }
+        .resource-link-list a:hover{
+            color:var(--secondary);
+            text-decoration:underline;
+        }
+        .faq-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:22px;
+        }
+        .faq-card{
+            background:#fff;
+            border-radius:16px;
+            padding:24px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-top:4px solid var(--secondary);
+        }
+        .faq-card h3{
+            color:var(--primary);
+            font-size:1.08rem;
+            margin-bottom:10px;
+            font-family:'Georgia', serif;
+        }
+        .faq-card p{line-height:1.7;}
         .articles-grid{
             display:grid;
             grid-template-columns:repeat(2,1fr);
-            gap:24px;
-            max-width:1100px;
+            gap:18px;
+            max-width:1050px;
             margin:0 auto;
         }
         .article-card{
             background:#fff;
-            border-radius:20px;
+            border-radius:18px;
             overflow:hidden;
-            box-shadow:0 10px 28px rgba(0,0,0,0.06);
+            box-shadow:0 8px 24px rgba(0,0,0,0.06);
             border:1px solid rgba(15,30,54,0.08);
             cursor:pointer;
-            transition:transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .article-card:hover{
-            transform:translateY(-2px);
-            box-shadow:0 14px 34px rgba(0,0,0,0.10);
         }
         .article-image{
             position:relative;
-            height:240px;
+            height:170px;
             overflow:hidden;
         }
         .article-image img{
@@ -192,19 +312,20 @@
             bottom:0;
             background:linear-gradient(180deg,rgba(15,30,54,0.05),rgba(15,30,54,0.92));
             color:var(--text-light);
-            padding:18px 18px 14px;
+            padding:14px 16px 12px;
             font-family:'Georgia', serif;
-            font-size:1.28rem;
+            font-size:1.08rem;
             font-weight:700;
         }
         .article-toggle{
-            padding:18px 20px;
+            padding:14px 16px;
             background:#fff;
             border-top:1px solid rgba(15,30,54,0.08);
         }
         .article-toggle p{
             color:var(--primary);
             font-weight:700;
+            font-size:0.95rem;
         }
         .article-desc{
             max-height:0;
@@ -213,25 +334,19 @@
             background:var(--bg-light);
         }
         .article-desc.open{
-            max-height:260px;
+            max-height:220px;
         }
         .article-desc p{
-            padding:18px 20px 22px;
-            font-size:1.01rem;
-            line-height:1.75;
+            padding:14px 16px 18px;
+            font-size:0.98rem;
+            line-height:1.7;
             color:var(--text-dark);
-        }
-        .card-link{
-            display:block;
-            text-decoration:none;
-            color:inherit;
         }
         .cta-band{
             background:var(--primary);
             color:var(--text-light);
             text-align:center;
             padding:70px 20px;
-            margin-top:30px;
         }
         .cta-band h2{
             font-size:2rem;
@@ -285,7 +400,7 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .articles-grid{grid-template-columns:1fr;}
+            .grid-2,.grid-3,.articles-grid{grid-template-columns:1fr;}
             .hero h1{font-size:2.3rem;}
         }
     </style>
@@ -307,22 +422,128 @@
 </header>
 
 <div class="hero">
-    <h1>Ways To Collect On A Judgment</h1>
-    <p>Explore the most common judgment collection tools used after a court win. Click any card to open a short explanation of what that method does and when it is used.</p>
+    <h1>Education and Judgment Collection</h1>
+    <p>Learn about small claims, what happens after you win, and the different ways to collect on a judgment in Washington, Idaho, and Oregon.</p>
     <a href="#articles" class="btn">View Collection Methods</a>
 </div>
 
+<section>
+    <h2 class="section-title">Small Claims and Judgment Basics</h2>
+    <div class="grid-2">
+        <div class="card">
+            <p>Small claims court is designed to resolve lower-dollar disputes in a faster and simpler way than a regular civil case. People often use it to recover unpaid money, damage claims, or other straightforward financial disputes.</p>
+            <p>Winning your case is an important step, but it does not always mean you will be paid right away. In many situations, the judgment debtor still has to be located and encouraged to pay.</p>
+        </div>
+        <div class="card">
+            <p><strong>Why this page exists:</strong> many people search for small claims help, how to file in small claims, how to collect a small claims judgment, and what to do when a judgment debtor does not pay.</p>
+            <p>Our goal is to give you clear next steps and help you move from judgment to collection.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">How To File In Small Claims</h2>
+    <div class="step-list">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div>
+                <h3>Identify the claim</h3>
+                <p>Start by deciding what money is owed, why it is owed, and whether your dispute fits small claims court rules in your state.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div>
+                <h3>Prepare the paperwork</h3>
+                <p>Small claims filing usually requires a claim form, a filing fee, and basic information about the other party.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div>
+                <h3>Serve the defendant</h3>
+                <p>The defendant must receive proper notice. Filing the case alone is not enough.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div>
+                <h3>Attend the hearing</h3>
+                <p>Bring your documents, photos, statements, and any other evidence that supports your claim.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">What Happens After You Win</h2>
+    <div class="grid-3">
+        <div class="mini-card">
+            <h3>You become the judgment creditor</h3>
+            <p>Once the court rules in your favor, you have a money judgment that may be collected through the next steps in the process.</p>
+        </div>
+        <div class="mini-card">
+            <h3>The court usually does not collect</h3>
+            <p>In most cases, the court does not collect the money for you. The winning party is usually responsible for post-judgment collection.</p>
+        </div>
+        <div class="mini-card">
+            <h3>The judgment debtor may not pay voluntarily</h3>
+            <p>If the judgment debtor does not pay on their own, collection tools may be needed.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">How To Collect A Small Claims Judgment</h2>
+    <div class="card">
+        <p>Collecting a small claims judgment may involve contacting the debtor, setting up a payment plan, locating assets, or using judgment enforcement tools such as garnishment or liens where allowed.</p>
+        <p>If payment does not happen right away, you may need help deciding which collection path makes the most sense based on the state, the amount owed, and the debtor’s situation.</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Washington, Idaho, And Oregon</h2>
+    <div class="accordion-list">
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Washington Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>In Washington, winning a small claims case does not mean the court will collect the money for you. If the debtor does not pay, the winning party may need to use the collection process.</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_jury.scc&altMenu=smal" target="_blank" rel="noopener noreferrer">Washington State Courts - Small Claims Court</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Idaho Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>Idaho court resources include instructions for filing a small claims action and for collecting on a small claims judgment. Those instructions reference writs, garnishment, and other post-judgment steps.</p>
+                <div class="resource-link-list">
+                    <a href="https://courtselfhelp.idaho.gov/Forms/claims" target="_blank" rel="noopener noreferrer">Idaho Court Assistance Office - Small Claims Forms</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Oregon Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>Oregon court guidance explains that the judgment creditor is responsible for collecting the money judgment after winning. It also covers payment plans, satisfaction filings, and other post-judgment steps.</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.oregon.gov/forms/Documents/SC-INSTR-plntf.pdf" target="_blank" rel="noopener noreferrer">Oregon Small Claims Instructions for Plaintiff</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="articles">
-    <h2 class="section-title">Judgment Collection Articles</h2>
+    <h2 class="section-title">Articles</h2>
     <div class="intro-box">
-        <p>Winning a judgment is only the first step. Many judgment creditors need to use collection tools to locate assets, apply pressure to pay, or force payment through court-approved enforcement methods.</p>
-        <p>The cards below highlight common ways people collect on judgments. Click each image to reveal a short description.</p>
+        <p>Explore the different ways to collect on a judgment. Click any image to reveal a short description of that collection method.</p>
     </div>
 
     <div class="articles-grid">
         <div class="article-card" onclick="toggleArticle(this)">
             <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80" alt="Courtroom for debtor examination">
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80" alt="Magnifying glass for debtor's examination">
                 <div class="article-title-bar">Debtor’s Examination</div>
             </div>
             <div class="article-toggle"><p>Click to learn more</p></div>
@@ -377,7 +598,7 @@
 
         <div class="article-card" onclick="toggleArticle(this)">
             <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80" alt="Sheriff for writ of execution">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80" alt="Truck for writ of execution">
                 <div class="article-title-bar">Writ of Execution</div>
             </div>
             <div class="article-toggle"><p>Click to learn more</p></div>
@@ -388,7 +609,7 @@
 
         <div class="article-card" onclick="toggleArticle(this)">
             <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1200&q=80" alt="Paper being handed to someone for subpoenas">
+                <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1200&q=80" alt="Paper with generic writing for subpoenas">
                 <div class="article-title-bar">Subpoenas</div>
             </div>
             <div class="article-toggle"><p>Click to learn more</p></div>
@@ -399,10 +620,40 @@
     </div>
 </section>
 
-<section class="cta-band">
-    <h2>Need Help Choosing The Right Tool?</h2>
-    <p>Every judgment is different. We can help you understand which collection method may fit your situation best.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
+<section class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+        <div class="faq-card">
+            <h3>What is judgment enforcement?</h3>
+            <p>Judgment enforcement is the process of using legal collection tools to try to recover money after a court judgment.</p>
+        </div>
+        <div class="faq-card">
+            <h3>Can you help with small claims?</h3>
+            <p>Yes. We help judgment creditors who won in small claims and need support collecting what is owed.</p>
+        </div>
+        <div class="faq-card">
+            <h3>What is a judgment debtor?</h3>
+            <p>A judgment debtor is the person or business that owes money under a court judgment.</p>
+        </div>
+        <div class="faq-card">
+            <h3>Do you work in Washington, Idaho, and Oregon?</h3>
+            <p>Yes. We serve judgment creditors across the Pacific Northwest.</p>
+        </div>
+        <div class="faq-card">
+            <h3>How do I file in small claims?</h3>
+            <p>Small claims filing usually starts with identifying the claim, completing the forms, and serving the other party properly.</p>
+        </div>
+        <div class="faq-card">
+            <h3>What if the debtor does not pay?</h3>
+            <p>If the debtor does not pay voluntarily, the next step may be judgment collection or enforcement.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band" id="contact">
+    <h2>Become a Client</h2>
+    <p>Reach out today and tell us about your judgment so we can help you understand the next step.</p>
+    <a href="contact.html" class="btn">Start Here</a>
 </section>
 
 <footer>
@@ -416,6 +667,16 @@
 </footer>
 
 <script>
+function toggleAccordion(btn){
+    const panel = btn.nextElementSibling;
+    const open = panel.classList.contains('open');
+    document.querySelectorAll('.accordion-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.accordion-btn span').forEach(s => s.textContent = '+');
+    if(!open){
+        panel.classList.add('open');
+        btn.querySelector('span').textContent = '–';
+    }
+}
 function toggleArticle(card){
     const desc = card.querySelector('.article-desc');
     const open = desc.classList.contains('open');
