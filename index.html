@@ -134,11 +134,16 @@
             line-height:1.8;
             margin-bottom:0;
         }
+        .quote-source{
+            margin-top:10px;
+            font-size:0.95rem;
+            color:#556070;
+        }
         .stat-band{
             background:var(--bg-light);
             border-left:5px solid var(--secondary);
             border-radius:var(--roundness);
-            padding:32px 30px;
+            padding:30px;
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
             max-width:900px;
             margin:0 auto;
@@ -149,13 +154,17 @@
             line-height:1;
             font-weight:800;
             color:var(--primary);
-            margin-bottom:12px;
+            margin-bottom:8px;
         }
-        .stat-band p{
-            font-size:1.08rem;
-            color:var(--text-dark);
-            max-width:760px;
-            margin:0 auto;
+        .stat-label{
+            font-size:1.05rem;
+            font-weight:700;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+        .stat-source{
+            font-size:0.9rem;
+            color:#6b7280;
         }
         .who-wrap{
             display:grid;
@@ -303,14 +312,16 @@
 
 <section class="quote-section">
     <div class="quote-box">
-        <blockquote class="quote-text">“The due administration of justice is the firmest pillar of good government.”</blockquote>
+        <blockquote class="quote-text">“The due administration of justice is the firmest pillar of good Government.”</blockquote>
+        <div class="quote-source">— George Washington</div>
     </div>
 </section>
 
 <section class="stat-section">
     <div class="stat-band">
         <div class="stat-number">80%</div>
-        <p>According to an ABA Journal article, roughly 80% of judgments go uncollected, which is why taking the next step can matter so much.</p>
+        <div class="stat-label">Percentage of financial judgments that go uncollected</div>
+        <div class="stat-source">Source: ABA Journal</div>
     </div>
 </section>
 
@@ -318,9 +329,6 @@
     <h2 class="section-title">Who We Are</h2>
     <div class="who-wrap">
         <div>
-            <div class="intro-box">
-                <p>Northwest Judgment Enforcement was created with a simple purpose: to help judgment creditors pursue what they are owed in a way that is steady, effective, and grounded in fairness. We believe a judgment should mean something, and our work focuses on helping clients move from a court victory to actual recovery.</p>
-            </div>
             <div class="card-grid">
                 <div class="info-card">
                     <h3>Our Mission</h3>
