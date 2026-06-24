@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Northwest Judgment Enforcement</title>
+    <title>Judgment Creditor Education | Northwest Judgment Enforcement</title>
     <style>
         :root{
             --primary:#0f1e36;
@@ -79,32 +79,22 @@
             font-size:0.95rem;
             transition:color 0.25s;
             white-space:nowrap;
-            margin-left:0;
         }
         nav.top-nav a:hover{color:var(--secondary);}
 
         .hero{
             background:
                 linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
-                url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-            padding:210px 20px 120px 20px;
+                url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            padding:220px 20px 120px 20px;
             color:var(--text-light);
             text-align:center;
         }
-        .hero h1{
-            font-size:2.8rem;
-            margin-bottom:18px;
-            font-weight:600;
-        }
-        .hero p{
-            font-size:1.15rem;
-            max-width:750px;
-            margin:0 auto;
-            color:#cbd5e0;
-        }
+        .hero h1{font-size:2.8rem;margin-bottom:18px;font-weight:600;}
+        .hero p{font-size:1.15rem;max-width:780px;margin:0 auto;color:#cbd5e0;}
 
         section{
-            padding:60px 20px;
+            padding:80px 20px;
             max-width:1200px;
             margin:0 auto;
             scroll-margin-top:110px;
@@ -130,94 +120,104 @@
             border-radius:2px;
         }
 
-        .contact-wrap{
-            display:grid;
-            grid-template-columns:0.9fr 1.1fr;
-            gap:28px;
-            align-items:start;
-            margin-top:0;
+        .intro-box{
+            max-width:900px;
+            margin:0 auto 30px auto;
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
+            padding:28px;
+            border-radius:var(--roundness);
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            text-align:center;
         }
 
-        .contact-info{
+        .articles-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:24px;
+            margin-top:24px;
+        }
+
+        .article-wrap{
+            display:grid;
+            gap:12px;
+        }
+
+        .article-card{
+            background:#fff;
+            border-radius:var(--roundness);
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            overflow:hidden;
+            border-top:4px solid var(--primary);
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            cursor:pointer;
+            text-align:left;
+        }
+
+        .article-card img{
+            width:100%;
+            height:190px;
+            object-fit:cover;
+            display:block;
+        }
+
+        .article-content{
+            padding:22px;
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+        }
+
+        .article-tag{
+            display:inline-block;
+            color:var(--secondary);
+            font-weight:700;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            letter-spacing:0.05em;
+        }
+
+        .article-content h3{
+            color:var(--primary);
+            font-size:1.2rem;
+            line-height:1.35;
+        }
+
+        .article-panel{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.35s ease, padding 0.35s ease;
             background:var(--bg-light);
             border-left:5px solid var(--secondary);
             border-radius:var(--roundness);
-            padding:28px;
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            padding:0 22px;
         }
 
-        .contact-info h3{
+        .article-panel.open{
+            max-height:900px;
+            padding:22px;
+        }
+
+        .article-panel h4{
             color:var(--primary);
-            margin-bottom:12px;
+            margin:14px 0 10px;
+            font-size:1.05rem;
         }
 
-        .contact-info p{
+        .article-panel p{
             margin-bottom:14px;
             color:var(--text-dark);
         }
 
-        .contact-card{
-            background:#fff;
-            border-radius:var(--roundness);
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            border-top:4px solid var(--secondary);
-            padding:30px;
-        }
-
-        .contact-form{
-            display:grid;
-            gap:16px;
-        }
-
-        .form-group{
-            display:grid;
-            gap:8px;
-        }
-
-        label{
-            font-weight:700;
-            color:var(--primary);
-            font-size:0.95rem;
-        }
-
-        input, select, textarea{
-            width:100%;
-            padding:14px 14px;
-            border:1px solid #d7dce3;
-            border-radius:10px;
-            font-size:1rem;
-            background:#fff;
-            color:var(--text-dark);
-            outline:none;
-            transition:border-color 0.2s, box-shadow 0.2s;
-        }
-
-        input:focus, select:focus, textarea:focus{
-            border-color:var(--secondary);
-            box-shadow:0 0 0 3px rgba(138,115,85,0.12);
-        }
-
-        textarea{
-            min-height:160px;
-            resize:vertical;
-        }
-
-        .btn{
-            background:var(--secondary);
-            color:var(--text-light);
-            padding:14px 28px;
-            text-decoration:none;
-            border:none;
-            border-radius:var(--roundness);
-            font-weight:700;
+        .back-top{
             display:inline-block;
-            transition:background 0.25s,transform 0.15s;
-            cursor:pointer;
-            font-size:1rem;
-        }
-        .btn:hover{
-            background:#735f43;
-            transform:translateY(-1px);
+            margin-top:8px;
+            color:var(--secondary);
+            text-decoration:none;
+            font-weight:700;
         }
 
         footer{
@@ -230,7 +230,6 @@
             line-height:1.8;
             width:100%;
             clear:both;
-            margin-top:40px;
         }
         .footer-verse{
             color:#e2e8f0;
@@ -264,12 +263,8 @@
             .hero{
                 padding-top:300px;
             }
-            .contact-wrap{
-                grid-template-columns:1fr;
-            }
-            section{
-                padding-top:45px;
-                padding-bottom:45px;
+            .article-card img{
+                height:180px;
             }
         }
     </style>
@@ -290,70 +285,83 @@
         </div>
     </header>
 
-    <div class="hero" role="region" aria-label="Contact introduction">
-        <h1>Contact Us</h1>
-        <p>Tell us about your judgment and we’ll help you understand the next step.</p>
+    <div class="hero" role="region" aria-label="Education introduction">
+        <h1>Judgment Creditor Education</h1>
+        <p>Learn about common enforcement tools and what they can mean for collecting on a court judgment.</p>
     </div>
 
-    <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+    <section aria-labelledby="education-heading">
+        <h2 id="education-heading" class="section-title">Articles</h2>
 
-        <div class="contact-wrap">
-            <div class="contact-info">
-                <h3>We’re Here to Help</h3>
-                <p>Use the form to tell us where your judgment was entered, what kind of case it is, and what you need help with.</p>
-                <p>We review each request carefully and respond with the next step in the process.</p>
-                <p>For the fastest response, include as much detail as possible in the description box.</p>
+        <div class="intro-box">
+            <p>
+                This page is designed to help judgment creditors understand the tools often used after a judgment is entered.
+                Click any article card below to expand the full explanation right on this page.
+            </p>
+        </div>
+
+        <div class="articles-grid">
+
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a1')">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Legal documents on a desk">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is a Debtor’s Examination?</h3>
+                    </div>
+                </div>
+                <div id="a1" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>A debtor’s examination is a court process used to ask the judgment debtor questions under oath about assets, income, and property that could be used to satisfy a judgment.</p>
+                    <h4>Why It Matters</h4>
+                    <p>When a creditor does not know where the money or property is, this process can help uncover information that is not visible from public records alone.</p>
+                    <h4>What Happens</h4>
+                    <p>The debtor may be required to appear in court or before an authorized official and answer questions about bank accounts, employment, property ownership, and other financial details.</p>
+                    <h4>How It Helps Collection</h4>
+                    <p>The information gathered can support later enforcement steps such as liens, wage garnishment, or a writ of execution.</p>
+                </div>
             </div>
 
-            <div class="contact-card">
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name">
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a2')">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Courtroom and legal setting">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is a Writ of Execution?</h3>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="location">Location</label>
-                        <select id="location" name="location">
-                            <option value="">Select a location</option>
-                            <option value="washington">Washington</option>
-                            <option value="idaho">Idaho</option>
-                            <option value="oregon">Oregon</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="judgment-type">Type of Judgment</label>
-                        <select id="judgment-type" name="judgment_type">
-                            <option value="">Select type of judgment</option>
-                            <option value="small_claims">Small Claims</option>
-                            <option value="federal_court">Federal Court</option>
-                            <option value="superior_court">Superior Court</option>
-                            <option value="district_court">District Court</option>
-                            <option value="family_court">Family Court</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea id="description" name="description" placeholder="Tell us about your judgment and what help you need"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn">Start My Case Review</button>
-                </form>
+                </div>
+                <div id="a2" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>A writ of execution is a court order that allows the enforcement of a judgment by directing a levying officer or sheriff to seize property that can be used to satisfy the debt.</p>
+                    <h4>Why It Matters</h4>
+                    <p>This tool can be useful when a debtor has property or assets that can be located and taken through the legal process.</p>
+                    <h4>What It Can Do</h4>
+                    <p>Depending on the law in the jurisdiction, a writ of execution may be used to seize non-exempt property, sell it, and apply the proceeds to the judgment balance.</p>
+                    <h4>When It Is Used</h4>
+                    <p>It is often used after other collection efforts have not produced payment, or when the creditor has information about specific assets.</p>
+                </div>
             </div>
+
+            <div class="article-wrap">
+                <div class="article-card" onclick="toggleArticle('a3')">
+                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Professional office meeting">
+                    <div class="article-content">
+                        <span class="article-tag">Education</span>
+                        <h3>What Is Wage Garnishment?</h3>
+                    </div>
+                </div>
+                <div id="a3" class="article-panel">
+                    <h4>Overview</h4>
+                    <p>Wage garnishment is a legal process that allows a creditor to collect part of a debtor’s paycheck through an employer after a judgment has been entered.</p>
+                    <h4>Why It Matters</h4>
+                    <p>It can provide a steady path toward payment when the debtor has regular employment income.</p>
+                    <h4>How It Works</h4>
+                    <p>The court usually issues an order that requires the employer to withhold a portion of wages and send those funds toward the judgment.</p>
+                    <h4>Important Limits</h4>
+                    <p>There are usually legal limits on how much can be taken, and those limits can vary depending on the type of debt and the jurisdiction.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -361,6 +369,13 @@
         <p class="footer-verse">“For the Lord is a God of justice; blessed are all those who wait for Him.” — Isaiah 30:18</p>
         <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
     </footer>
+
+    <script>
+        function toggleArticle(id){
+            const panel = document.getElementById(id);
+            panel.classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>
