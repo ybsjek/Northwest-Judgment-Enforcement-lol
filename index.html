@@ -3,7 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Northwest Judgment Enforcement helps with small claims help, judgment collection, and judgment enforcement in Washington, Idaho, and Oregon.">
     <title>Northwest Judgment Enforcement | We Help You Collect Your Court Judgments</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Northwest Judgment Enforcement",
+      "description": "Northwest Judgment Enforcement helps judgment creditors with small claims help, judgment collection, and judgment enforcement in Washington, Idaho, and Oregon.",
+      "url": "https://yourdomain.com/",
+      "telephone": "509-802-6893",
+      "email": "nwjudgmentenforcement@gmail.com",
+      "areaServed": [
+        "Washington",
+        "Idaho",
+        "Oregon"
+      ],
+      "serviceType": [
+        "Small Claims Help",
+        "Judgment Collection",
+        "Judgment Enforcement"
+      ],
+      "priceRange": "$$",
+      "sameAs": []
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yourdomain.com/"
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root{
             --primary:#0f1e36;
@@ -15,8 +56,13 @@
             --roundness:14px;
         }
         html{scroll-behavior:smooth;}
-        *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
-        body{color:var(--text-dark);line-height:1.6;background:#fff;}
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{
+            color:var(--text-dark);
+            line-height:1.6;
+            background:#fff;
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+        }
         header{
             background:var(--primary);
             padding:15px 10px;
@@ -71,7 +117,6 @@
             font-size:0.95rem;
             transition:color 0.25s;
             white-space:nowrap;
-            margin-left:0;
         }
         nav.top-nav a:hover{color:var(--secondary);}
         .hero{
@@ -82,8 +127,17 @@
             color:var(--text-light);
             text-align:center;
         }
-        .hero h1{font-size:2.8rem;margin-bottom:20px;font-weight:600;}
-        .hero p{font-size:1.15rem;max-width:700px;margin:0 auto 35px;color:#cbd5e0;}
+        .hero h1{
+            font-size:2.8rem;
+            margin-bottom:20px;
+            font-family:'Georgia', serif;
+        }
+        .hero p{
+            font-size:1.15rem;
+            max-width:700px;
+            margin:0 auto 35px;
+            color:#cbd5e0;
+        }
         .btn{
             background:var(--secondary);
             color:var(--text-light);
@@ -109,6 +163,7 @@
             padding-bottom:15px;
             font-size:2rem;
             color:var(--primary);
+            font-family:'Georgia', serif;
         }
         .section-title::after{
             content:'';
@@ -149,6 +204,7 @@
             max-width:760px;
             text-align:center;
             box-shadow:0 10px 30px rgba(0,0,0,0.12);
+            font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
         }
         .quote-text{
             font-size:1.45rem;
@@ -160,33 +216,77 @@
             margin-top:12px;
             font-size:1rem;
             color:#4b5563;
+            font-family:'Segoe UI', sans-serif;
         }
-        .pnw-box,.small-claims-box,.stat-band{
+        .pnw-section{
+            background:linear-gradient(180deg,#f8f9fa,#eef3f7);
+            border-radius:26px;
+        }
+        .accordion-list{
             max-width:900px;
             margin:0 auto;
+            display:grid;
+            gap:16px;
+        }
+        .accordion-item{
+            border-radius:18px;
+            overflow:hidden;
+            box-shadow:0 8px 24px rgba(0,0,0,0.05);
+            border:1px solid rgba(15,30,54,0.08);
+            background:#fff;
+        }
+        .accordion-btn{
+            width:100%;
+            padding:20px 22px;
+            border:0;
+            background:linear-gradient(90deg,#0f1e36,#1b3359);
+            color:var(--text-light);
+            font-size:1.08rem;
+            font-weight:700;
+            cursor:pointer;
+            text-align:left;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .accordion-btn span{font-size:1.2rem;color:var(--secondary);}
+        .accordion-panel{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.3s ease;
+            background:#fff;
+        }
+        .accordion-panel.open{max-height:420px;}
+        .accordion-panel p{
+            padding:18px 22px 12px;
+            font-size:1.02rem;
+            color:var(--text-dark);
+            line-height:1.75;
+        }
+        .resource-link-list{
+            padding:0 22px 22px;
+            display:grid;
+            gap:10px;
+        }
+        .resource-link-list a{
+            color:var(--primary);
+            text-decoration:none;
+            font-weight:700;
+        }
+        .resource-link-list a:hover{
+            color:var(--secondary);
+            text-decoration:underline;
+        }
+        .stat-band{
+            max-width:900px;
+            margin:0 auto;
+            background:var(--bg-light);
+            border-left:5px solid var(--secondary);
             border-radius:var(--roundness);
             padding:30px;
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
-        }
-        .pnw-box{
-            background:var(--bg-light);
-            border-left:5px solid var(--secondary);
-        }
-        .small-claims-box{
-            background:#fff;
-            border-top:4px solid var(--secondary);
-        }
-        .pnw-box p,.small-claims-box p{
-            color:var(--text-dark);
-            margin-bottom:14px;
-            font-size:1.05rem;
-            line-height:1.7;
-        }
-        .pnw-box p:last-child,.small-claims-box p:last-child{margin-bottom:0;}
-        .stat-band{
-            background:var(--bg-light);
-            border-left:5px solid var(--secondary);
             text-align:center;
+            font-family:'Trebuchet MS', sans-serif;
         }
         .stat-number{
             font-size:4rem;
@@ -218,68 +318,62 @@
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
             border-top:4px solid var(--secondary);
             text-align:center;
+            font-family:'Trebuchet MS', sans-serif;
         }
         .feature-card h3{
             color:var(--primary);
             margin-bottom:12px;
             font-size:1.15rem;
+            font-family:'Georgia', serif;
         }
         .feature-card p{
             color:var(--text-dark);
             line-height:1.55;
         }
-        .process-section{
-            background:var(--bg-light);
-            border-radius:26px;
-        }
-        .services-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-            gap:24px;
-            margin-top:20px;
-        }
-        .service-card{
+        .small-claims-box{
+            max-width:900px;
+            margin:0 auto;
             background:#fff;
-            padding:28px;
-            border-radius:var(--roundness);
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
             border-top:4px solid var(--secondary);
-            text-align:center;
+            border-radius:var(--roundness);
+            padding:30px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            font-family:'Segoe UI', sans-serif;
         }
-        .step-icon{
-            width:58px;
-            height:58px;
-            margin:0 auto 14px auto;
-            border-radius:50%;
-            background:var(--bg-alt);
-            display:flex;
-            align-items:center;
-            justify-content:center;
+        .small-claims-box p{
+            color:var(--text-dark);
+            margin-bottom:14px;
+            font-size:1.05rem;
+            line-height:1.7;
         }
-        .step-icon img{
-            width:28px;
-            height:28px;
-            object-fit:contain;
-            display:block;
-            filter:invert(13%) sepia(24%) saturate(1208%) hue-rotate(187deg) brightness(92%) contrast(94%);
-        }
-        .service-card:nth-child(2){background:#f8fbff;}
-        .service-card:nth-child(3){background:#fffaf5;}
-        .service-card:nth-child(4){background:#f7fafc;}
-        .service-card h3{
-            margin-bottom:12px;
-            color:var(--primary);
-            font-size:1.15rem;
-        }
-        .service-card p{color:var(--text-dark);line-height:1.45;}
+        .small-claims-box p:last-child{margin-bottom:0;}
         .cta-band{
             background:var(--primary);
             color:var(--text-light);
             text-align:center;
             padding:70px 20px;
         }
-        .cta-band h2{font-size:2rem;margin-bottom:12px;}
+        .cta-band h2{font-size:2rem;margin-bottom:12px;font-family:'Georgia', serif;}
         .cta-band p{max-width:760px;margin:0 auto 24px auto;color:#cbd5e0;}
+        .faq-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:22px;
+        }
+        .faq-card{
+            background:#fff;
+            border-radius:16px;
+            padding:24px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-top:4px solid var(--secondary);
+        }
+        .faq-card h3{
+            color:var(--primary);
+            font-size:1.08rem;
+            margin-bottom:10px;
+            font-family:'Georgia', serif;
+        }
+        .faq-card p{line-height:1.7;}
         footer{
             background:var(--primary);
             color:#a0aec0;
@@ -296,6 +390,7 @@
             font-style:italic;
             margin-bottom:14px;
             font-size:1rem;
+            font-family:'Georgia', serif;
         }
         .footer-contact-line{
             margin:8px 0 10px 0;
@@ -315,9 +410,7 @@
             color:var(--secondary);
             text-decoration:underline;
         }
-        .footer-divider{
-            color:#a0aec0;
-        }
+        .footer-divider{color:#a0aec0;}
         @media(max-width:992px){
             .nav-container{flex-direction:column;text-align:center;}
             .logo-container{justify-content:center;}
@@ -364,9 +457,34 @@
 
 <section class="pnw-section">
     <h2 class="section-title">Serving the Pacific Northwest</h2>
-    <div class="pnw-box">
-        <p>Northwest Judgment Enforcement serves clients throughout Washington, Idaho, and Oregon. We work across the Pacific Northwest to help judgment creditors pursue collection options that fit the state where the judgment was entered or where the debtor and assets are located.</p>
-        <p>From urban counties to rural communities, we understand that judgment enforcement often depends on local procedure, location of assets, and the practical steps available in each state. Our goal is to help clients move forward with a clear plan and consistent communication.</p>
+    <div class="accordion-list">
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Washington Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>In Washington, winning a small claims case does not mean the court will collect the money for you. If the debtor does not pay, the winning party may need to use the collection process, and court resources note that help from an attorney or collection agency may sometimes be needed [web:1345][web:1381].</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_jury.scc&altMenu=smal" target="_blank" rel="noopener noreferrer">Washington State Courts - Small Claims Court</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Idaho Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>Idaho court resources include instructions for filing a small claims action and for collecting on a small claims judgment. Those instructions reference writs, garnishment, and other post-judgment steps [web:1348][web:1372][web:1379].</p>
+                <div class="resource-link-list">
+                    <a href="https://courtselfhelp.idaho.gov/Forms/claims" target="_blank" rel="noopener noreferrer">Idaho Court Assistance Office - Small Claims Forms</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn" type="button" onclick="toggleAccordion(this)">Oregon Small Claims <span>+</span></button>
+            <div class="accordion-panel">
+                <p>Oregon court guidance explains that the judgment creditor is responsible for collecting the money judgment after winning. It also covers payment plans, satisfaction filings, and other post-judgment steps [web:1386][web:1354].</p>
+                <div class="resource-link-list">
+                    <a href="https://www.courts.oregon.gov/forms/Documents/SC-INSTR-plntf.pdf" target="_blank" rel="noopener noreferrer">Oregon Small Claims Instructions for Plaintiff</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -401,42 +519,39 @@
     <div class="small-claims-box">
         <p><strong>Congratulations</strong> on winning your small claims case.</p>
         <p>If you have a judgment in hand and are ready to collect, we are here to help you understand your options and move toward payment. Small claims judgments can still require real work to enforce, and we can help guide the process.</p>
-        <p>We Buy Small Claims Judgments.</p>
-    <div style="text-align:center; margin-top:20px;">
-    <a href="small-claims.html" class="btn">Learn About Small Claims</a>
-</div></div>
+        <p>In some situations, we may also be interested in purchasing small claims judgments. If that is something you want to explore, we can discuss it during a consultation.</p>
+        <div style="text-align:center; margin-top:22px;">
+            <a href="small-claims.html" class="btn">Learn About Small Claims</a>
+        </div>
+    </div>
 </section>
 
-<section id="about" class="process-section">
-    <h2 class="section-title">What the Process Looks Like</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="step-icon">
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/telephone.svg" alt="Consultation icon">
-            </div>
-            <h3>Consultation</h3>
-            <p>No two cases move the same way, which is why every client starts with a one-on-one consultation and a plan tailored to the details of the judgment.</p>
+<section>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+        <div class="faq-card">
+            <h3>What is judgment enforcement?</h3>
+            <p>Judgment enforcement is the process of using legal collection tools to try to recover money after a court judgment.</p>
         </div>
-        <div class="service-card">
-            <div class="step-icon">
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/search.svg" alt="Locate assets icon">
-            </div>
-            <h3>Locate Assets and Income</h3>
-            <p>We identify where the debtor’s assets and income are held by reviewing county and state records and, when needed, using court proceedings to uncover more information.</p>
+        <div class="faq-card">
+            <h3>Can you help with small claims?</h3>
+            <p>Yes. We help judgment creditors who won in small claims and need support collecting what is owed.</p>
         </div>
-        <div class="service-card">
-            <div class="step-icon">
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/house.svg" alt="Lien icon">
-            </div>
-            <h3>Place Liens</h3>
-            <p>Once assets are identified, we place liens where available to create leverage and encourage payment.</p>
+        <div class="faq-card">
+            <h3>What is a judgment debtor?</h3>
+            <p>A judgment debtor is the person or business that owes money under a court judgment.</p>
         </div>
-        <div class="service-card">
-            <div class="step-icon">
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/briefcase.svg" alt="Collect on judgment icon">
-            </div>
-            <h3>Collect on the Judgment</h3>
-            <p>We work to secure voluntary payment first, while staying prepared to use the available legal tools to press the matter to resolution if needed.</p>
+        <div class="faq-card">
+            <h3>Do you work in Washington, Idaho, and Oregon?</h3>
+            <p>Yes. We serve judgment creditors across the Pacific Northwest.</p>
+        </div>
+        <div class="faq-card">
+            <h3>How do I file in small claims?</h3>
+            <p>Small claims filing usually starts with identifying the claim, completing the forms, and serving the other party properly.</p>
+        </div>
+        <div class="faq-card">
+            <h3>What if the debtor does not pay?</h3>
+            <p>If the debtor does not pay voluntarily, the next step may be judgment collection or enforcement.</p>
         </div>
     </div>
 </section>
@@ -456,5 +571,18 @@
     </p>
     <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
 </footer>
+
+<script>
+function toggleAccordion(btn){
+    const panel = btn.nextElementSibling;
+    const open = panel.classList.contains('open');
+    document.querySelectorAll('.accordion-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.accordion-btn span').forEach(s => s.textContent = '+');
+    if(!open){
+        panel.classList.add('open');
+        btn.querySelector('span').textContent = '–';
+    }
+}
+</script>
 </body>
 </html>
