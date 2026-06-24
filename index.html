@@ -121,23 +121,40 @@
             background:var(--secondary);
             border-radius:2px;
         }
-        .quote-box{
-            text-align:center;
-            max-width:900px;
+        .quote-hero{
+            position:relative;
+            max-width:1000px;
             margin:0 auto;
-            padding:0;
+            border-radius:24px;
+            overflow:hidden;
+            min-height:360px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:30px;
+            background:
+                linear-gradient(rgba(15,30,54,0.28),rgba(15,30,54,0.28)),
+                url('https://www.publicdomainpictures.net/pictures/320000/velka/george-washington-portrait.jpg') no-repeat center center/cover;
+        }
+        .quote-overlay{
+            background:rgba(255,255,255,0.74);
+            backdrop-filter:blur(2px);
+            border-radius:18px;
+            padding:30px 28px;
+            max-width:760px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.12);
         }
         .quote-text{
-            font-size:1.2rem;
+            font-size:1.45rem;
             color:var(--primary);
             font-style:italic;
-            line-height:1.8;
-            margin-bottom:0;
+            line-height:1.7;
         }
         .quote-source{
-            margin-top:10px;
-            font-size:0.95rem;
-            color:#556070;
+            margin-top:12px;
+            font-size:1rem;
+            color:#4b5563;
         }
         .stat-band{
             background:var(--bg-light);
@@ -166,21 +183,42 @@
             font-size:0.9rem;
             color:#6b7280;
         }
-        .who-wrap{
+        .feature-strip{
             display:grid;
-            grid-template-columns:1.2fr 0.8fr;
-            gap:28px;
+            grid-template-columns:repeat(3,1fr);
+            gap:22px;
             align-items:stretch;
         }
-        .intro-box{
-            background:var(--bg-light);
-            border-left:5px solid var(--secondary);
+        .feature-card{
+            background:#fff;
+            padding:28px;
             border-radius:var(--roundness);
-            padding:30px;
             box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            margin-bottom:24px;
+            border-top:4px solid var(--secondary);
+            text-align:center;
         }
-        .intro-box p{color:var(--text-dark);font-size:1.05rem;}
+        .feature-card h3{
+            color:var(--primary);
+            margin-bottom:12px;
+            font-size:1.15rem;
+        }
+        .feature-card p{
+            color:var(--text-dark);
+            line-height:1.55;
+        }
+        .lead-card{
+            background:#fff;
+            padding:26px;
+            border-radius:var(--roundness);
+            box-shadow:0 8px 24px rgba(0,0,0,0.04);
+            border-left:5px solid var(--secondary);
+        }
+        .lead-card h3{
+            color:var(--primary);
+            margin-bottom:10px;
+            font-size:1.15rem;
+        }
+        .lead-card p{color:var(--text-dark);}
         .side-photo{
             border-radius:var(--roundness);
             overflow:hidden;
@@ -194,27 +232,6 @@
             object-fit:cover;
             display:block;
         }
-        .card-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-            gap:24px;
-            margin-top:20px;
-        }
-        .info-card{
-            background:#fff;
-            padding:28px;
-            border-radius:var(--roundness);
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            border-top:4px solid var(--secondary);
-        }
-        .info-card:nth-child(2){background:var(--bg-alt);}
-        .info-card:nth-child(3){background:#fff7ef;}
-        .info-card h3{
-            margin-bottom:12px;
-            color:var(--primary);
-            font-size:1.15rem;
-        }
-        .info-card p{color:var(--text-dark);line-height:1.55;}
         .process-section{
             background:var(--bg-light);
             border-radius:26px;
@@ -266,12 +283,21 @@
             margin-bottom:14px;
             font-size:1rem;
         }
-        .footer-phone{
+        .footer-label{
+            color:#e2e8f0;
+            font-weight:700;
+            margin-top:8px;
+        }
+        .footer-contact{
+            margin-top:8px;
+        }
+        .footer-contact a{
             color:#e2e8f0;
             text-decoration:none;
             transition:color 0.25s ease, text-decoration 0.25s ease;
+            display:block;
         }
-        .footer-phone:hover{
+        .footer-contact a:hover{
             color:var(--secondary);
             text-decoration:underline;
         }
@@ -282,10 +308,9 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .who-wrap{grid-template-columns:1fr;}
+            .feature-strip{grid-template-columns:1fr;}
             .side-photo img{min-height:260px;}
             .stat-number{font-size:3.2rem;}
-            .services-grid{grid-template-columns:1fr;}
         }
     </style>
 </head>
@@ -311,9 +336,11 @@
 </div>
 
 <section class="quote-section">
-    <div class="quote-box">
-        <blockquote class="quote-text">“The due administration of justice is the firmest pillar of good Government.”</blockquote>
-        <div class="quote-source">— George Washington</div>
+    <div class="quote-hero">
+        <div class="quote-overlay">
+            <blockquote class="quote-text">“The due administration of justice is the firmest pillar of good Government.”</blockquote>
+            <div class="quote-source">— George Washington</div>
+        </div>
     </div>
 </section>
 
@@ -327,25 +354,18 @@
 
 <section id="who-we-are">
     <h2 class="section-title">Who We Are</h2>
-    <div class="who-wrap">
-        <div>
-            <div class="card-grid">
-                <div class="info-card">
-                    <h3>Our Mission</h3>
-                    <p>Our mission is to help clients pursue lawful collection with a thoughtful process, clear communication, and a strategy tailored to each case.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Our Approach</h3>
-                    <p>We start by understanding the judgment, identifying possible sources of recovery, and choosing the most practical enforcement path forward.</p>
-                </div>
-                <div class="info-card">
-                    <h3>What Drives Us</h3>
-                    <p>We are guided by the idea that justice should not stop at the courtroom door. Our goal is to help clients bring their judgments to a meaningful result.</p>
-                </div>
-            </div>
+    <div class="feature-strip">
+        <div class="feature-card">
+            <h3>Purpose-Driven</h3>
+            <p>We help judgment creditors move from a court win to real recovery with a process built around steady, practical action.</p>
         </div>
-        <div class="side-photo">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Office desk with legal documents and a laptop">
+        <div class="feature-card">
+            <h3>Focused Strategy</h3>
+            <p>Each matter is approached with care so we can identify the most effective path toward payment and meaningful progress.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Results-Minded</h3>
+            <p>Our work is designed to encourage voluntary resolution first while keeping stronger enforcement tools ready when needed.</p>
         </div>
     </div>
 </section>
@@ -354,20 +374,24 @@
     <h2 class="section-title">What the Process Looks Like</h2>
     <div class="services-grid">
         <div class="service-card">
-            <h3>Step 1: Consultation</h3>
+            <div class="step-icon">📞</div>
+            <h3>Consultation</h3>
             <p>No two cases move the same way, which is why every client starts with a one-on-one consultation and a plan tailored to the details of the judgment.</p>
         </div>
         <div class="service-card">
-            <h3>Step 2: Locate Assets and Income</h3>
+            <div class="step-icon">🔎</div>
+            <h3>Locate Assets and Income</h3>
             <p>We identify where the debtor’s assets and income are held by reviewing county and state records and, when needed, using court proceedings to uncover more information.</p>
         </div>
         <div class="service-card">
-            <h3>Step 3: Place Liens</h3>
+            <div class="step-icon">🏠</div>
+            <h3>Place Liens</h3>
             <p>Once assets are identified, we place liens where available to create leverage and encourage payment.</p>
         </div>
         <div class="service-card">
-            <h3>Step 4: Finalize Payment</h3>
-            <p>When the judgment is resolved, we help complete the process and record the satisfaction of judgment so the matter is fully closed.</p>
+            <div class="step-icon">💼</div>
+            <h3>Collect on the Judgment</h3>
+            <p>We work to secure voluntary payment first, while staying prepared to use the available legal tools to press the matter to resolution if needed.</p>
         </div>
     </div>
 </section>
@@ -381,7 +405,11 @@
 <footer>
     <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
     <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
-    <p><a href="tel:5098026893" class="footer-phone">509-802-6893</a></p>
+    <div class="footer-label">Contact</div>
+    <div class="footer-contact">
+        <a href="tel:5098026893">509-802-6893</a>
+        <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a>
+    </div>
 </footer>
 </body>
 </html>
