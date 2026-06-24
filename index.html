@@ -65,15 +65,23 @@
 
         .logo-text span{color:var(--secondary);}
 
-        nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;}
-        nav a{
+        nav.top-nav{
+            display:flex;
+            align-items:center;
+            gap:18px;
+            flex-wrap:nowrap;
+            justify-content:flex-end;
+        }
+
+        nav.top-nav a{
             color:var(--text-light);
             text-decoration:none;
-            margin-left:25px;
             font-size:0.95rem;
             transition:color 0.25s;
+            white-space:nowrap;
+            margin-left:0;
         }
-        nav a:hover{color:var(--secondary);}
+        nav.top-nav a:hover{color:var(--secondary);}
 
         .hero{
             background:
@@ -126,7 +134,7 @@
         }
 
         .verse-section{
-            padding:50px 20px 10px 20px;
+            padding:40px 20px 10px 20px;
             max-width:900px;
             margin:0 auto;
         }
@@ -371,20 +379,53 @@
             width:100%;
             clear:both;
         }
+        .footer-verse{
+            color:#e2e8f0;
+            font-style:italic;
+            margin-bottom:14px;
+            font-size:1rem;
+        }
 
         @media(max-width:992px){
-            .nav-container{flex-direction:column;text-align:center;}
-            .logo-container{justify-content:center;}
-            .logo-img{height:44px;max-width:105px;}
-            .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
-            nav{flex-direction:column;}
-            nav a{margin:8px 0;}
-            .hero{padding-top:300px;}
-            .who-wrap,.help-wrap{grid-template-columns:1fr;}
-            .side-photo img,.help-photo img{min-height:260px;}
-            .article-card img{height:180px;}
-            .pricing-row{grid-template-columns:1fr;}
-            .pricing-card.featured{transform:none;}
+            .nav-container{
+                flex-direction:column;
+                text-align:center;
+            }
+            .logo-container{
+                justify-content:center;
+            }
+            .logo-img{
+                height:44px;
+                max-width:105px;
+            }
+            .logo-text{
+                font-size:1.1rem;
+                white-space:normal;
+                text-align:center;
+            }
+            nav.top-nav{
+                justify-content:center;
+                flex-wrap:wrap;
+                gap:12px 18px;
+            }
+            .hero{
+                padding-top:300px;
+            }
+            .who-wrap,.help-wrap{
+                grid-template-columns:1fr;
+            }
+            .side-photo img,.help-photo img{
+                min-height:260px;
+            }
+            .article-card img{
+                height:180px;
+            }
+            .pricing-row{
+                grid-template-columns:1fr;
+            }
+            .pricing-card.featured{
+                transform:none;
+            }
         }
     </style>
 </head>
@@ -396,7 +437,7 @@
                 <img src="logo.png" alt="Northwest Judgment Enforcement logo" class="logo-img" onerror="this.style.display='none'">
                 <div class="logo-text">Northwest <span>Judgment Enforcement</span></div>
             </a>
-            <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation" class="top-nav">
                 <a href="#who-we-are">Who We Are</a>
                 <a href="#about">What We Do</a>
                 <a href="#tools">How We Help</a>
@@ -566,6 +607,7 @@
     </section>
 
     <footer role="contentinfo">
+        <p class="footer-verse">“For the Lord is a God of justice; blessed are all those who wait for Him.” — Isaiah 30:18</p>
         <p>&copy; 2026 Northwest Judgment Enforcement. All rights reserved.<br>Washington - Idaho - Oregon</p>
     </footer>
 
