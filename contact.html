@@ -3,47 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Northwest Judgment Enforcement helps with small claims help, judgment collection, and judgment enforcement in Washington, Idaho, and Oregon.">
-    <title>Northwest Judgment Enforcement | We Help You Collect Your Court Judgments</title>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "Northwest Judgment Enforcement",
-      "description": "Northwest Judgment Enforcement helps judgment creditors with small claims help, judgment collection, and judgment enforcement in Washington, Idaho, and Oregon.",
-      "url": "https://yourdomain.com/",
-      "telephone": "509-802-6893",
-      "email": "nwjudgmentenforcement@gmail.com",
-      "areaServed": [
-        "Washington",
-        "Idaho",
-        "Oregon"
-      ],
-      "serviceType": [
-        "Small Claims Help",
-        "Judgment Collection",
-        "Judgment Enforcement"
-      ],
-      "priceRange": "$$",
-      "sameAs": []
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://yourdomain.com/"
-        }
-      ]
-    }
-    </script>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Contact Northwest Judgment Enforcement for judgment collection and enforcement in Washington, Idaho, and Oregon.">
+    <title>Contact | Northwest Judgment Enforcement</title>
 
     <style>
         :root{
@@ -123,37 +85,39 @@
             background:
                 linear-gradient(rgba(15,30,54,0.92),rgba(15,30,54,0.80)),
                 url('https://images.unsplash.com/photo-1528747045269-390fe33c19c7?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-            padding:220px 20px 120px 20px;
+            padding:220px 20px 120px;
             color:var(--text-light);
             text-align:center;
         }
         .hero h1{
             font-size:2.8rem;
-            margin-bottom:20px;
+            margin-bottom:18px;
             font-family:'Georgia', serif;
         }
         .hero p{
-            font-size:1.15rem;
-            max-width:700px;
-            margin:0 auto 35px;
+            font-size:1.12rem;
+            max-width:760px;
+            margin:0 auto 34px;
             color:#cbd5e0;
         }
         .btn{
             background:var(--secondary);
             color:var(--text-light);
-            padding:14px 35px;
+            padding:14px 34px;
             text-decoration:none;
             border-radius:var(--roundness);
             font-weight:700;
             display:inline-block;
             transition:background 0.25s,transform 0.15s;
+            border:0;
+            cursor:pointer;
+            font-size:1rem;
         }
         .btn:hover{background:#735f43;transform:translateY(-1px);}
         section{
             padding:90px 20px;
             max-width:1200px;
             margin:0 auto;
-            clear:both;
             scroll-margin-top:110px;
         }
         .section-title{
@@ -176,185 +140,83 @@
             background:var(--secondary);
             border-radius:2px;
         }
-        .quote-hero{
-            position:relative;
-            max-width:1000px;
-            margin:0 auto;
-            border-radius:24px;
-            overflow:hidden;
-            min-height:380px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            padding:30px;
-            background:
-                linear-gradient(rgba(15,30,54,0.74), rgba(15,30,54,0.74)),
-                linear-gradient(135deg, rgba(138,115,85,0.22), rgba(15,30,54,0.18)),
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/960px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg') no-repeat center center/cover;
-            background-position:center center;
-            filter:saturate(0.8) contrast(0.95) brightness(0.82);
-        }
-        .quote-overlay{
-            position:relative;
-            z-index:1;
-            background:rgba(255,255,255,0.84);
-            backdrop-filter:blur(2px);
-            border-radius:18px;
-            padding:30px 28px;
-            max-width:760px;
-            text-align:center;
-            box-shadow:0 10px 30px rgba(0,0,0,0.12);
-            font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-        }
-        .quote-text{
-            font-size:1.45rem;
-            color:var(--primary);
-            font-style:italic;
-            line-height:1.7;
-        }
-        .quote-source{
-            margin-top:12px;
-            font-size:1rem;
-            color:#4b5563;
-            font-family:'Segoe UI', sans-serif;
-        }
-        .pnw-section{
-            background:linear-gradient(180deg,#f8f9fa,#eef3f7);
-            border-radius:26px;
-        }
-        .accordion-list{
-            max-width:900px;
-            margin:0 auto;
+        .contact-grid{
             display:grid;
-            gap:16px;
+            grid-template-columns:1fr 1fr;
+            gap:24px;
+            align-items:start;
         }
-        .accordion-item{
+        .card{
+            background:#fff;
             border-radius:18px;
-            overflow:hidden;
             box-shadow:0 8px 24px rgba(0,0,0,0.05);
-            border:1px solid rgba(15,30,54,0.08);
-            background:#fff;
+            padding:28px;
+            border-top:4px solid var(--secondary);
         }
-        .accordion-btn{
-            width:100%;
-            padding:20px 22px;
-            border:0;
-            background:linear-gradient(90deg,#0f1e36,#1b3359);
-            color:var(--text-light);
-            font-size:1.08rem;
-            font-weight:700;
-            cursor:pointer;
-            text-align:left;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
-        .accordion-btn span{font-size:1.2rem;color:var(--secondary);}
-        .accordion-panel{
-            max-height:0;
-            overflow:hidden;
-            transition:max-height 0.3s ease;
-            background:#fff;
-        }
-        .accordion-panel.open{max-height:420px;}
-        .accordion-panel p{
-            padding:18px 22px 12px;
+        .card p,.card li{
             font-size:1.02rem;
             color:var(--text-dark);
             line-height:1.75;
         }
-        .resource-link-list{
-            padding:0 22px 22px;
+        .info-list{
+            list-style:none;
             display:grid;
-            gap:10px;
+            gap:14px;
+            margin-top:14px;
         }
-        .resource-link-list a{
-            color:var(--primary);
-            text-decoration:none;
-            font-weight:700;
-        }
-        .resource-link-list a:hover{
-            color:var(--secondary);
-            text-decoration:underline;
-        }
-        .stat-band{
-            max-width:900px;
-            margin:0 auto;
+        .info-list li{
+            padding:14px 16px;
             background:var(--bg-light);
-            border-left:5px solid var(--secondary);
-            border-radius:var(--roundness);
-            padding:30px;
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            text-align:center;
-            font-family:'Trebuchet MS', sans-serif;
+            border-radius:12px;
+            border-left:4px solid var(--secondary);
         }
-        .stat-number{
-            font-size:4rem;
-            line-height:1;
-            font-weight:800;
-            color:var(--primary);
+        .info-list a{
+            color:inherit;
+            text-decoration:none;
+        }
+        .form-group{
+            margin-bottom:18px;
+        }
+        .form-group label{
+            display:block;
             margin-bottom:8px;
-        }
-        .stat-label{
-            font-size:1.05rem;
             font-weight:700;
             color:var(--primary);
-            margin-bottom:10px;
         }
-        .stat-source{
-            font-size:0.9rem;
-            color:#6b7280;
-        }
-        .feature-strip{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:22px;
-            align-items:stretch;
-        }
-        .feature-card{
+        .form-group input,
+        .form-group textarea,
+        .form-group select{
+            width:100%;
+            padding:14px 15px;
+            border:1px solid #d5dbe3;
+            border-radius:12px;
+            font-size:1rem;
+            font-family:inherit;
             background:#fff;
-            padding:28px;
-            border-radius:var(--roundness);
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            border-top:4px solid var(--secondary);
-            text-align:center;
-            font-family:'Trebuchet MS', sans-serif;
-        }
-        .feature-card h3{
-            color:var(--primary);
-            margin-bottom:12px;
-            font-size:1.15rem;
-            font-family:'Georgia', serif;
-        }
-        .feature-card p{
             color:var(--text-dark);
-            line-height:1.55;
         }
-        .small-claims-box{
-            max-width:900px;
-            margin:0 auto;
-            background:#fff;
-            border-top:4px solid var(--secondary);
-            border-radius:var(--roundness);
-            padding:30px;
-            box-shadow:0 8px 24px rgba(0,0,0,0.04);
-            font-family:'Segoe UI', sans-serif;
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus{
+            outline:none;
+            border-color:var(--secondary);
+            box-shadow:0 0 0 3px rgba(138,115,85,0.12);
         }
-        .small-claims-box p{
-            color:var(--text-dark);
-            margin-bottom:14px;
-            font-size:1.05rem;
+        .form-group textarea{
+            min-height:160px;
+            resize:vertical;
+        }
+        .note-box{
+            background:var(--bg-alt);
+            border-left:5px solid var(--secondary);
+            padding:20px 22px;
+            border-radius:14px;
+            margin-top:22px;
+        }
+        .note-box p{
+            margin:0;
             line-height:1.7;
         }
-        .small-claims-box p:last-child{margin-bottom:0;}
-        .cta-band{
-            background:var(--primary);
-            color:var(--text-light);
-            text-align:center;
-            padding:70px 20px;
-        }
-        .cta-band h2{font-size:2rem;margin-bottom:12px;font-family:'Georgia', serif;}
-        .cta-band p{max-width:760px;margin:0 auto 24px auto;color:#cbd5e0;}
         .faq-grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -374,6 +236,22 @@
             font-family:'Georgia', serif;
         }
         .faq-card p{line-height:1.7;}
+        .cta-band{
+            background:var(--primary);
+            color:var(--text-light);
+            text-align:center;
+            padding:70px 20px;
+        }
+        .cta-band h2{
+            font-size:2rem;
+            margin-bottom:12px;
+            font-family:'Georgia', serif;
+        }
+        .cta-band p{
+            max-width:760px;
+            margin:0 auto 24px auto;
+            color:#cbd5e0;
+        }
         footer{
             background:var(--primary);
             color:#a0aec0;
@@ -383,7 +261,6 @@
             border-top:3px solid var(--secondary);
             line-height:1.8;
             width:100%;
-            clear:both;
         }
         .footer-verse{
             color:#e2e8f0;
@@ -401,14 +278,13 @@
             gap:12px;
             flex-wrap:wrap;
         }
-        .footer-contact-line a{
-            color:#e2e8f0;
-            text-decoration:none;
-            transition:color 0.25s ease, text-decoration 0.25s ease;
-        }
+        .footer-contact-line a,
+        .footer-contact-line a:visited,
+        .footer-contact-line a:active,
         .footer-contact-line a:hover{
-            color:var(--secondary);
-            text-decoration:underline;
+            color:#e2e8f0 !important;
+            text-decoration:none !important;
+            -webkit-text-fill-color:#e2e8f0 !important;
         }
         .footer-divider{color:#a0aec0;}
         @media(max-width:992px){
@@ -418,11 +294,11 @@
             .logo-text{font-size:1.1rem;white-space:normal;text-align:center;}
             nav.top-nav{justify-content:center;flex-wrap:wrap;gap:12px 18px;}
             .hero{padding-top:300px;}
-            .feature-strip{grid-template-columns:1fr;}
-            .stat-number{font-size:3.2rem;}
-            .quote-hero{min-height:340px;background-position:center 15%;}
+            .contact-grid{grid-template-columns:1fr;}
+            .hero h1{font-size:2.3rem;}
         }
     </style>
+</head>
 <body>
 <header>
     <div class="nav-container">
@@ -439,38 +315,53 @@
     </div>
 </header>
 
-<div class="hero" id="top">
-    <h1>Become a Client</h1>
-    <p>Tell us about your judgment and we’ll review your situation and explain the next step.</p>
+<div class="hero">
+    <h1>Contact Northwest Judgment Enforcement</h1>
+    <p>Tell us about your judgment, and we’ll help you figure out the next step toward collection.</p>
+    <a href="#contact-form" class="btn">Send a Message</a>
 </div>
 
 <section>
-    <h2 class="section-title">Get Started</h2>
-    <div class="contact-wrap">
-        <div class="contact-info">
-            <h2>What to Send</h2>
-            <p>Please include your name, email, phone number, the amount of the judgment, the court, and any details you already know about the debtor’s assets or employment.</p>
-            <p class="small-note">The more information you provide, the easier it is to determine the best path forward.</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+        <div class="card">
+            <p><strong>We help with:</strong> judgment collection and judgment enforcement in Washington, Idaho, and Oregon.</p>
+            <ul class="info-list">
+                <li><strong>Phone:</strong> <a href="tel:5098026893">509-802-6893</a></li>
+                <li><strong>Email:</strong> <a href="mailto:nwjudgmentenforcement@gmail.com">nwjudgmentenforcement@gmail.com</a></li>
+                <li><strong>Service Area:</strong> Washington, Idaho, Oregon</li>
+            </ul>
+            <div class="note-box">
+                <p>Please include the court, case type, judgment amount, and whether you already have a judgment when you contact us. That helps us respond more efficiently.</p>
+            </div>
         </div>
 
-        <div class="contact-form">
-            <h2>Client Intake Form</h2>
-            <form name="client-intake" action="thank-you.html" method="GET">
-                <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="card" id="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
                 </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
                 </div>
-                <div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="state" name="state">
+                        <option value="">Select a state</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Oregon">Oregon</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="message">Case Details</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" placeholder="Tell us about your judgment or collection issue"></textarea>
                 </div>
                 <button type="submit" class="btn">Submit</button>
             </form>
@@ -478,8 +369,32 @@
     </div>
 </section>
 
+<section class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+        <div class="faq-card">
+            <h3>What kind of cases do you help with?</h3>
+            <p>We help with judgment collection and enforcement matters.</p>
+        </div>
+        <div class="faq-card">
+            <h3>Do you work in my state?</h3>
+            <p>We focus on Washington, Idaho, and Oregon.</p>
+        </div>
+        <div class="faq-card">
+            <h3>How do I start?</h3>
+            <p>Send us your case details using the form or contact us by phone or email.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <h2>Need Help With A Judgment?</h2>
+    <p>Reach out today and let us help you understand your options.</p>
+    <a href="#contact-form" class="btn">Contact Us Now</a>
+</section>
+
 <footer>
-    <p class="footer-verse">“For the Lord is righteous, He loves justice; the upright will see His face.” — Psalm 11:7</p>
+    <p class="footer-verse">“For the Lord is righteous, he loves justice; the upright will see his face.” — Psalm 11:7</p>
     <p class="footer-contact-line">
         <a href="tel:5098026893">509-802-6893</a>
         <span class="footer-divider">|</span>
